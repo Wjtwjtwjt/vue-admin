@@ -1,0 +1,26 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
+    }],
+    "stage-2"
+  ],
+//   vue-cli默认生成的项目中自带了babel-plugin-transform-runtime，其保证了一定的浏览器兼容性。但其存在两个问题：
+// 异步加载组件时，会产生 polyfill 代码冗余
+// 不支持对全局函数与实例方法的 polyfill 
+// 介于以上两种缺点，我们需要增加babel-polyfill，同时删除babel-plugin-transform-runtime
+// # 安装babel-polyfill
+// npm install babel-polyfill --save
+
+// # 卸载babel-plugin-transform-runtime
+// npm uninstall babel-plugin-transform-runtime --save  
+// 在入口文件main.js中引入babel-polyfill
+// import 'babel-polyfill'
+"plugins": [
+    // "transform-vue-jsx", 
+    // "transform-runtime"
+  ]
+}

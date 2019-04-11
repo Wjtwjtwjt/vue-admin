@@ -1,0 +1,259 @@
+@import './normalize.less';
+@import './reset.less';
+
+body {
+  font-family: "Microsoft YaHei", "微软雅黑", tahoma, Helvetica;
+  color: #333;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// 登录界面
+.login-wrap {
+  background-image: url(http://8.su.bdimg.com/skin/105.jpg);
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  h5 {
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    top: 200px;
+  }
+
+  .login-from {
+    background-color: #fff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  .login-from .login-btn {
+    width: 100%;
+  }
+}
+
+//  头部
+.container,
+.aside .aside-menu {
+  height: 100%;
+}
+
+.header {
+  background-color: #23262e;
+  line-height: 60px;
+  overflow: hidden;
+  position: relative;
+
+  .header-l {
+    float: left;
+    color: #D53E35;
+    margin-left: 48px;
+    font-size: 16px;
+  }
+
+  .userinfo {
+    text-align: right;
+    cursor: pointer;
+
+    .el-dropdown {
+      color: #fff;
+    }
+
+  }
+
+  .textC {
+    text-align: center;
+  }
+
+  .editPawDialog {
+    width: 400px;
+  }
+
+  // .header-r {
+  //   ul {
+  //     position: absolute;
+  //     top: 0;
+  //     right: 8px;
+
+  //     li {
+  //       float: left;
+
+  //       .show-a {
+  //         font-size: 14px;
+  //         color: #fff;
+  //         display: block;
+  //         height: 100%;
+  //         padding: 0 20px;
+  //         // color: #fff;
+  //         color: rgba(255, 255, 255, .7);
+
+  //         .badge {
+  //           padding: 0px 5px;
+  //           background-color: #ee0e19;
+  //           border-radius: 2px;
+  //           font-size: 12px;
+  //           color: #fff;
+  //         }
+  //       }
+
+  //       .hide {
+  //         display: none;
+  //         position: absolute;
+  //         // top: 60px;
+  //         right: 114px;
+  //         width: 157px;
+  //         // padding:5px 10px 10px;
+  //         height: 120px;
+
+  //         background-color: #000;
+
+  //         div {
+  //           width: 100%;
+  //           height: 40px;
+  //           line-height: 40px;
+
+  //           a {
+  //             display: block;
+  //             width: 100%;
+  //             cursor: pointer;
+  //             color: #fff;
+  //             font-size: 14px;
+  //             opacity: 0.8;
+  //             padding: 0 10px;
+  //             box-sizing: border-box;
+
+  //             span {
+  //               float: right;
+  //               margin-right: 5px;
+  //               color: red
+  //             }
+  //           }
+  //         }
+
+  //         a:hover {
+  //           background-color: #DABB84;
+  //         }
+  //       }
+
+  //     }
+
+  //     li:hover {
+  //       .show-a {
+  //         background-color: #DABB84;
+  //       }
+  //     }
+
+  //     .show:hover {
+  //       .hide {
+  //         display: block;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+// 侧边
+.aside {
+  background-color: #393d49;
+  min-width: 200;
+
+  .el-menu {
+    border-right: 0;
+
+    .el-menu-item {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+      width: 160px;
+      padding-left: 20px !important;
+      z-index: 1;
+      background-color: #282b33 !important;
+
+    }
+  }
+
+  .el-scrollbar:hover>.el-scrollbar__bar,
+  .el-scrollbar:active>.el-scrollbar__bar,
+  .el-scrollbar:focus>.el-scrollbar__bar {
+    opacity: 0;
+  }
+
+  .el-menu-item-group__title {
+    padding: 0;
+    line-height: normal;
+    // font-size: 12px;
+    // color: #909399;
+  }
+
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+
+  .el-menu-item.is-active {
+    color: rgb(90, 165, 20) !important;
+  }
+}
+
+// 主体
+.main {
+  padding: 0;
+  height: 100%;
+
+  .breadcrumb-container {
+    position: fixed;
+    z-index: 10;
+    top: 60px;
+    left: 200px;
+    right: 0px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    padding: 15px 20px;
+    overflow: hidden;
+
+    // background-color: red;
+    .breadcrumb-inner {
+      float: left;
+    }
+
+    .breadcrumb-innerr {
+      float: right;
+    }
+  }
+
+  // 底部
+  .footer {
+    position: fixed;
+    left: 200px;
+    // width: 100%;
+    padding: 0 15px;
+    bottom: 0;
+    height: 44px;
+    right: 0;
+    font-size: 14px;
+    line-height: 44px;
+    background-color: #EEE;
+  }
+
+  // 中间主体样式
+  .manage {
+    padding: 60px 20px 0;
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    // height: auto;
+    margin-bottom: 50px;
+    .el-form{
+    background-color: #fff;
+    }
+  }
+}
